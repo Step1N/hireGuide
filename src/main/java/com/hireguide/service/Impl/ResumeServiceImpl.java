@@ -5,9 +5,11 @@ import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.parser.PdfTextExtractor;
 
 import com.hireguide.service.ResumeService;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+@Service
 public class ResumeServiceImpl implements ResumeService {
 
 

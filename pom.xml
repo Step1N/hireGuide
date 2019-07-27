@@ -18,12 +18,14 @@
         <java.version>1.8</java.version>
         <springfox.swagger.version>2.9.2</springfox.swagger.version>
         <itext.pdf.version>5.5.13</itext.pdf.version>
+        <spring.boot>1.4.0.BUILD-SNAPSHOT</spring.boot>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+            <version>1.5.4.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -53,8 +55,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-            <version>1.2.3.RELEASE</version>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>

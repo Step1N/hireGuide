@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.hireguide.dto.HireGuideDTO;
 import com.hireguide.repository.HireGuideRepository;
 import com.hireguide.service.HireGuideService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class HireGuideServiceImpl implements HireGuideService{
 	
 	@Autowired
