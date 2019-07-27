@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.hireguide.dto.HireGuideDTO;
 import com.hireguide.service.HireGuideService;
 
-public abstract class HireGuideController {
+@RestController
+public class HireGuideController {
 	
 	@Autowired
 	HireGuideService guideService;
