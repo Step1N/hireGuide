@@ -15,9 +15,7 @@ import com.hireguide.model.HireGuideDetail;
 @Repository
 public interface HireGuideRepository extends MongoRepository<HireGuideDetail, String> {
 	
-	List<HireGuideDTO> findByPartyId(int partyId);
-	
-	HireGuideDetail findById(long id);
+	List<HireGuideDTO> findByCandidateId(int candidateId);
 	
 	HireGuideDetail save(HireGuideDetail hireGuideDetail);
 
