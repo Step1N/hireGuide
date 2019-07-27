@@ -55,3 +55,4 @@ target/maven-status/
 .idea/vcs.xml
 HireGuide.iml
 .idea/***
+.settings
