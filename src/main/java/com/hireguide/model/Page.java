@@ -1,12 +1,15 @@
 package com.hireguide.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
 public class Page {
+
+  public void setContent(String content) {
+    this.content = content;
+  }
+
   private String content;
 
-  public Page(String content) {
+  public Page(final String content) {
     this.content = content;
   }
 

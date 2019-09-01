@@ -15,13 +15,10 @@ public class HireGuideServiceImpl implements HireGuideService{
 	
 	@Autowired
 	HireGuideRepository hireGuideRepository; 
-	
+
 	@Override
 	public HireGuideDTO create(HireGuideDTO dto) {
-
-		HireGuideDetail hireGuideDetail = new HireGuideDetail();
-		hireGuideDetail.setCandidateId(dto.getCandidateId());
-		hireGuideRepository.save(hireGuideDetail);
+		hireGuideRepository.save(null);
 
 		return dto;
 	}

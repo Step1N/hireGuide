@@ -3,6 +3,8 @@ package com.hireguide.service;
 import com.hireguide.exception.ResumeServiceException;
 import com.hireguide.model.HireGuideDetail;
 
+import java.util.List;
+
 public interface ResumeService {
 
   /**

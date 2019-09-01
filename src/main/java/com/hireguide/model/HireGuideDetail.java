@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.ArrayList;
 import java.util.List;
 
-@Document
+@Document(collection = "candidates")
 public class HireGuideDetail {
 
   @Id
@@ -14,6 +14,26 @@ public class HireGuideDetail {
   private String contactNumber;
   private String email;
   private String name;
+  private List<Page> pages;
+
+  public HireGuideDetail(final String contactNumber,
+                              final String email,
+                              final String name,
+                              final List<Page> pages) {
+    this.candidateId = candidateId;
+    this.contactNumber = contactNumber;
+    this.email = email;
+    this.name = name;
+    this.pages = pages;
+
+  }
+
+  public List<Page> getPages() {
+    if (null == pages) {
+      return new ArrayList<Page>();
+    }
+    return pages;
+  }
 
   public String getContactNumber() {
     return contactNumber;
@@ -39,14 +59,6 @@ public class HireGuideDetail {
     this.name = name;
   }
 
-  public List<Page> getPages() {
-    if (null == pages) {
-      return new ArrayList<Page>();
-    }
-    return pages;
-  }
-
-  private List<Page> pages;
 
   public String getCandidateId() {
     return candidateId;
