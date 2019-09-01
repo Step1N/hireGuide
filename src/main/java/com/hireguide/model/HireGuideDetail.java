@@ -14,4 +14,11 @@ public class HireGuideDetail {
 	public void setCandidateId(String candidateId) {
 		this.candidateId = candidateId;
 	}
+
+	public HireGuideDetail(String candidateId) {
+		this.candidateId = candidateId;
+	}
+
+	public HireGuideDetail() {
+	}
 }

@@ -2,6 +2,7 @@ package com.hireguide.service.Impl;
 
 import java.util.List;
 
+import com.hireguide.model.HireGuideDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.hireguide.dto.HireGuideDTO;
@@ -18,7 +19,11 @@ public class HireGuideServiceImpl implements HireGuideService{
 	@Override
 	public HireGuideDTO create(HireGuideDTO dto) {
 
-		return null;
+		HireGuideDetail hireGuideDetail = new HireGuideDetail();
+		hireGuideDetail.setCandidateId(dto.getCandidateId());
+		hireGuideRepository.save(hireGuideDetail);
+
+		return dto;
 	}
 	@Override
 	public List<HireGuideDTO> fetchList() {
