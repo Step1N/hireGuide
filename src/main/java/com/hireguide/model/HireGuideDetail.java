@@ -1,12 +1,15 @@
 package com.hireguide.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Document
 public class HireGuideDetail {
 
+  @Id
   private String candidateId;
   private String contactNumber;
   private String email;
@@ -37,11 +40,10 @@ public class HireGuideDetail {
   }
 
   public List<Page> getPages() {
+    if (null == pages) {
+      return new ArrayList<Page>();
+    }
     return pages;
-  }
-
-  public void setPages(List<Page> pages) {
-    this.pages = pages;
   }
 
   private List<Page> pages;

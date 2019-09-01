@@ -1,6 +1,7 @@
 package com.hireguide.service;
 
 import com.hireguide.exception.ResumeServiceException;
+import com.hireguide.model.HireGuideDetail;
 
 public interface ResumeService {
 
@@ -9,7 +10,7 @@ public interface ResumeService {
    * @param pdfContent
    * @throws ResumeServiceException
    */
-  void readPDF(byte[] pdfContent) throws ResumeServiceException;
+  HireGuideDetail readPDF(byte[] pdfContent) throws ResumeServiceException;
 
   void processPDF() throws ResumeServiceException;
 
